@@ -1,16 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Canvas, useFrame, ThreeElements } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { Sphere, Box, Cylinder, Text, Html, OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import { CheckCircle, RefreshCcw } from 'lucide-react';
 import { motion } from 'framer-motion';
-
-// Add type support for Three.js elements in JSX
-declare global {
-  namespace JSX {
-    interface IntrinsicElements extends ThreeElements {}
-  }
-}
+import '../../types';
 
 // --- Types ---
 interface LabProps {

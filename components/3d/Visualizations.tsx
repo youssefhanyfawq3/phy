@@ -1,14 +1,8 @@
 import React, { useRef } from 'react';
-import { useFrame, ThreeElements } from '@react-three/fiber';
+import { useFrame } from '@react-three/fiber';
 import { Sphere, Box, Cylinder, TorusKnot, Line } from '@react-three/drei';
 import * as THREE from 'three';
-
-// Add type support for Three.js elements in JSX
-declare global {
-  namespace JSX {
-    interface IntrinsicElements extends ThreeElements {}
-  }
-}
+import '../../types';
 
 // 1. Pendulum Visualization
 export const PendulumVis = () => {

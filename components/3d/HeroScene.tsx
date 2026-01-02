@@ -1,14 +1,8 @@
 import React, { Suspense } from 'react';
-import { Canvas, ThreeElements } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import { PendulumVis, ElasticityVis, AtomVis, WaveVis } from './Visualizations';
-
-// Add type support for Three.js elements in JSX
-declare global {
-  namespace JSX {
-    interface IntrinsicElements extends ThreeElements {}
-  }
-}
+import '../../types';
 
 interface SceneProps {
   mode: 'default' | 'pendulum' | 'elasticity' | 'atom' | 'waves';
