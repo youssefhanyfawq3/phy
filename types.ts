@@ -27,27 +27,3 @@ export enum GameState {
   PLAYING,
   FINISHED
 }
-
-// Add global JSX namespace augmentation for Three.js elements to fix missing type errors
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      group: any;
-      mesh: any;
-      meshStandardMaterial: any;
-      meshBasicMaterial: any;
-      cylinderGeometry: any;
-      sphereGeometry: any;
-      planeGeometry: any;
-      shadowMaterial: any;
-      ambientLight: any;
-      pointLight: any;
-      points: any;
-      bufferGeometry: any;
-      bufferAttribute: any;
-      pointsMaterial: any;
-      gridHelper: any;
-      primitive: any;
-    }
-  }
-}
